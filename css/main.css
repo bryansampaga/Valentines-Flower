@@ -47,7 +47,7 @@ body {
 .floating-messages span {
   position: absolute;
   left: 50%;
-  bottom: 18vh;
+  bottom: 48vh;
   transform: translateX(-50%);
   font-size: clamp(1.1rem, 2.2vw, 2rem);
   font-weight: 700;
@@ -118,7 +118,7 @@ body {
 
 @media screen and (max-width: 574px) {
   .floating-messages span {
-    bottom: 24vh;
+    bottom: 56vh;
     white-space: normal;
     max-width: 88vw;
     text-align: center;
