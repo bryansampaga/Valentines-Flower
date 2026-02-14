@@ -28,6 +28,7 @@ body{
     display: inline-block;
     animation: glow 2.5s ease-in-out infinite;
     animation-delay: calc(var(--i, 0) * 0.2s);
+    margin: 0 0.04em;
 }
 @keyframes glow{
     0%, 100%{
@@ -35,12 +36,14 @@ body{
         text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
     }
     10%, 90%{
-        color: #111;
-        text-shadow: none;
+        color: #dff9ff;
+        text-shadow: 0 0 5px rgba(57, 198, 214, 0.35);
     }
 }
-.greetings > .space{
-    width: 0.6em;
+.greetings > .break{
+    flex-basis: 100%;
+    width: 0;
+    height: 0;
     animation: none;
 }
 

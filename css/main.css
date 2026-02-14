@@ -47,8 +47,8 @@ body {
 .floating-messages span {
   position: absolute;
   left: 50%;
-  bottom: 48vh;
-  transform: translateX(-50%);
+  bottom: 64vh;
+  transform: translateX(calc(-50% + var(--x, 0px)));
   font-size: clamp(1.1rem, 2.2vw, 2rem);
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -56,34 +56,35 @@ body {
   text-shadow: 0 0 8px #ff4da6, 0 0 20px #ff4da6, 0 0 42px #ff1f5a;
   opacity: 0;
   white-space: nowrap;
-  animation: message-float 9.6s ease-in-out infinite;
+  padding: 0.2em 0.6em;
+  animation: message-float 12s ease-in-out infinite;
   animation-delay: var(--d, 0s);
 }
 
 @-webkit-keyframes message-float {
   0% {
     opacity: 0;
-    transform: translateX(-50%) translateY(14px) scale(0.95);
+    transform: translateX(calc(-50% + var(--x, 0px))) translateY(20px) scale(0.94);
     filter: blur(2px);
   }
-  12% {
+  10% {
     opacity: 1;
-    transform: translateX(-50%) translateY(0) scale(1);
+    transform: translateX(calc(-50% + var(--x, 0px))) translateY(0) scale(1);
     filter: blur(0);
   }
-  45% {
+  35% {
     opacity: 0.95;
-    transform: translateX(-50%) translateY(-38px) scale(1.02);
+    transform: translateX(calc(-50% + var(--x, 0px))) translateY(-52px) scale(1.03);
     filter: blur(0);
   }
-  75% {
+  58% {
     opacity: 0;
-    transform: translateX(-50%) translateY(-70px) scale(1.06);
+    transform: translateX(calc(-50% + var(--x, 0px))) translateY(-106px) scale(1.08);
     filter: blur(2px);
   }
   100% {
     opacity: 0;
-    transform: translateX(-50%) translateY(-85px) scale(1.08);
+    transform: translateX(calc(-50% + var(--x, 0px))) translateY(-128px) scale(1.1);
     filter: blur(3px);
   }
 }
@@ -91,36 +92,36 @@ body {
 @keyframes message-float {
   0% {
     opacity: 0;
-    transform: translateX(-50%) translateY(14px) scale(0.95);
+    transform: translateX(calc(-50% + var(--x, 0px))) translateY(20px) scale(0.94);
     filter: blur(2px);
   }
-  12% {
+  10% {
     opacity: 1;
-    transform: translateX(-50%) translateY(0) scale(1);
+    transform: translateX(calc(-50% + var(--x, 0px))) translateY(0) scale(1);
     filter: blur(0);
   }
-  45% {
+  35% {
     opacity: 0.95;
-    transform: translateX(-50%) translateY(-38px) scale(1.02);
+    transform: translateX(calc(-50% + var(--x, 0px))) translateY(-52px) scale(1.03);
     filter: blur(0);
   }
-  75% {
+  58% {
     opacity: 0;
-    transform: translateX(-50%) translateY(-70px) scale(1.06);
+    transform: translateX(calc(-50% + var(--x, 0px))) translateY(-106px) scale(1.08);
     filter: blur(2px);
   }
   100% {
     opacity: 0;
-    transform: translateX(-50%) translateY(-85px) scale(1.08);
+    transform: translateX(calc(-50% + var(--x, 0px))) translateY(-128px) scale(1.1);
     filter: blur(3px);
   }
 }
 
 @media screen and (max-width: 574px) {
   .floating-messages span {
-    bottom: 56vh;
+    bottom: 72vh;
     white-space: normal;
-    max-width: 88vw;
+    max-width: 80vw;
     text-align: center;
   }
 }
